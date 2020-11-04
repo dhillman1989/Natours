@@ -264,7 +264,9 @@ body {
     background-blend-mode: screen;
     height: 23rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px; }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
     .card__picture--2 {
@@ -321,6 +323,69 @@ body {
     font-size: 8rem;
     font-weight: 100; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding: 6rem;
+  font-size: 1.6rem;
+  padding-left: 9rem;
+  transform: skewX(-12deg);
+  position: relative; }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    overflow: hidden;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg); }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all 1s;
+    backface-visibility: hidden; }
+  .story__text {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.5), rgba(40, 180, 133, 0.5)), url(../img/hero.jpg);
@@ -355,19 +420,19 @@ body {
   .row [class^='col-'] {
     float: left; }
     .row [class^='col-']:not(:last-child) {
-      margin-right: 8rem; }
+      margin-right: 4rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 8rem) / 2); }
+    width: calc((100% - 4rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 8rem) / 3); }
+    width: calc((100% - 2 * 4rem) / 3); }
   .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 * 8rem) / 3) + 8rem); }
+    width: calc( 2 * ((100% - 2 * 4rem) / 3) + 4rem); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 8rem) / 4); }
+    width: calc((100% - 3 * 4rem) / 4); }
   .row .col-2-of-4 {
-    width: calc( 2 * ((100% - 3 * 8rem) / 4) + 8rem); }
+    width: calc( 2 * ((100% - 3 * 4rem) / 4) + 4rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 * 8rem) / 4) + 2 * 8rem); }
+    width: calc( 3 * ((100% - 3 * 4rem) / 4) + 2 * 4rem); }
 
 .section-about {
   background-color: #f7f7f7;
@@ -387,5 +452,13 @@ body {
 
 .section-tours {
   background-color: #f7f7f7, 0.5;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 20rem 0;
   margin-top: -10rem; }
+
+.section-stories {
+  padding: 20rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-top: -10rem;
+  position: relative; }
