@@ -1,5 +1,21 @@
 html {
-  font-size: 10px;
+  font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9 px ... 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 55%; // 1rem = 8 px ... 8/16 = 50%
+  }
+
+  @include respond(phone) {
+    font-size: 50%; // 1rem = 9 px ... 9/16 = 56.25%
+  }
+
+  @include respond(desk-lg) {
+    font-size: 75%; // 1rem = 9 px ... 9/16 = 56.25%
+  }
 }
 
 * {
@@ -15,4 +31,8 @@ body {
   line-height: 1.7;
   color: $color-grey-dark;
   padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
