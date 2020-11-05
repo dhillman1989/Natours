@@ -57,14 +57,14 @@
         <h1 class="heading-primary">
           <span class="heading-primary--main">Outdoors</span>
           <span class="heading-primary--sub">is where life happens</span>
-          <a href="#" class="btn btn--white btn--animated"
+          <a href="#section-tours" class="btn btn--white btn--animated"
             >Discover our tours</a
           >
         </h1>
       </div>
     </header>
     <main>
-      <section class="section-about">
+      <section class="section-about" id="section-about">
         <div class="u-center-text u-margin-bottom-large">
           <h2 class="heading-secondary">
             Exciting Tours For Adventurous People
@@ -114,7 +114,7 @@
           </div>
         </div>
       </section>
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -162,7 +162,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-tours">
+      <section class="section section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-medium">
           <h2 class="heading-secondary">Most Popular Tours</h2>
         </div>
@@ -192,7 +192,7 @@
                     <p class="card__price-only">only</p>
                     <p class="card__price-value">£297</p>
                   </div>
-                  <a class="btn btn--white" href="#">Book Now</a>
+                  <a class="btn btn--white" href="#popup">Book Now</a>
                 </div>
               </div>
             </div>
@@ -222,7 +222,7 @@
                     <p class="card__price-only">only</p>
                     <p class="card__price-value">£497</p>
                   </div>
-                  <a class="btn btn--white" href="#">Book Now</a>
+                  <a class="btn btn--white" href="#popup">Book Now</a>
                 </div>
               </div>
             </div>
@@ -252,7 +252,7 @@
                     <p class="card__price-only">only</p>
                     <p class="card__price-value">£897</p>
                   </div>
-                  <a class="btn btn--white" href="#">Book Now</a>
+                  <a class="btn btn--white" href="#popup">Book Now</a>
                 </div>
               </div>
             </div>
@@ -262,7 +262,7 @@
           <a href="#" class="btn btn--green">Discover all tours</a>
         </div>
       </section>
-      <section class="section-stories">
+      <section class="section-stories" id="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/video.mp4" type="video/mp4" />
@@ -413,6 +413,45 @@
           </div>
         </div>
       </footer>
+      <div class="popup" id="popup">
+        <div class="popup__content">
+          <div class="popup__image-box">
+            <img
+              src="../img/nat-8.jpg"
+              class="popup__image"
+              alt="Booking illustration"
+            />
+            <img
+              src="../img/nat-9.jpg"
+              class="popup__image"
+              alt="Booking illustration"
+            />
+          </div>
+          <div class="popup__text">
+            <div class="u-margin-bottom-small">
+              <a class="popup__close-icon" href="#section-tours">&times;</a>
+              <h2 class="heading-secondary">Start Booking Now</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Necessitatibus qui repudiandae maxime amet, eligendi assumenda
+              dicta quis laboriosam nemo dolorum debitis adipisci tempore,
+              tenetur ab laborum voluptates quibusdam? Error asperiores velit
+              amet similique laboriosam maiores eligendi, laudantium aperiam
+              iste necessitatibus natus corporis porro veritatis praesentium
+              ducimus, in quo fugit exercitationem voluptas. Molestias,
+              reiciendis dolorem? Dolorum facere facilis illo laboriosam magni,
+              eius ipsa dignissimos provident beatae corporis neque hic
+              veritatis natus commodi voluptas quibusdam pariatur illum.
+              Voluptas, dignissimos ducimus! Quod vitae corrupti nemo modi
+              praesentium non? Repellat, repudiandae accusamus nemo architecto
+              impedit unde voluptates incidunt magni. Debitis quis impedit
+              perspiciatis nesciunt.
+            </p>
+            <button class="btn btn--green u-margin-top-medium">Book Now</button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- <section class="grid-test">
