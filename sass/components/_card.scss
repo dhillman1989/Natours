@@ -7,6 +7,7 @@
 
   &__side {
     transition: all 0.8s ease;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     width: 100%;
     font-size: 2rem;

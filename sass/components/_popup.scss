@@ -10,6 +10,12 @@
   visibility: hidden;
   transition: all 1s;
 
+  @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-color: rgba($color-black, 0.3);
+  }
+
   &:target {
     visibility: visible;
     opacity: 1;

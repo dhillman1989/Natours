@@ -311,6 +311,7 @@ body {
   position: relative; }
   .card__side {
     transition: all 0.8s ease;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     width: 100%;
     font-size: 2rem;
@@ -646,6 +647,11 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 1s; }
+  @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+      background-color: rgba(0, 0, 0, 0.3); } }
   .popup:target {
     visibility: visible;
     opacity: 1; }
@@ -694,13 +700,19 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.5), rgba(40, 180, 133, 0.5)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.5), rgba(40, 180, 133, 0.5)), url(../img/hero-small.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   position: relative; }
+  @media (min-resolution: 192dpi) and (min-width: 600px) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.5), rgba(40, 180, 133, 0.5)), url(../img/hero.jpg); } }
+  @media (min-width: 2000px) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.5), rgba(255, 119, 48, 0.5)), url(../img/hero.jpg); } }
   @media (max-width: 56.25em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
@@ -938,10 +950,11 @@ body {
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 15rem;
-  margin-top: -10vh; }
+  margin-top: -25vh; }
   @media (max-width: 56.25em) {
     .section-about {
-      padding: 15rem 0; } }
+      padding: 20rem 0;
+      margin-top: -15vh; } }
 
 .section-features {
   padding: 20rem 0;
