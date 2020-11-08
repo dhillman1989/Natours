@@ -510,6 +510,11 @@ body {
     body {
       padding: 0; } }
 
+::-webkit-selection,
+::selection {
+  background-color: #7ed56f;
+  color: #fff; }
+
 .heading-primary {
   color: #fff;
   text-transform: uppercase; }
@@ -843,7 +848,7 @@ body {
   .card__price-value {
     font-size: 8rem;
     font-weight: 100; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       width: 80%;
@@ -1153,10 +1158,10 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   position: relative; }
-  @media (min-resolution: 192dpi) and (min-width: 600px) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 600px) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.5), rgba(40, 180, 133, 0.5)), url(../img/hero.jpg); } }
-  @media (min-width: 2000px) {
+  @media only screen and (min-width: 2000px) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.5), rgba(255, 119, 48, 0.5)), url(../img/hero.jpg); } }
   @media (max-width: 56.25em) {
